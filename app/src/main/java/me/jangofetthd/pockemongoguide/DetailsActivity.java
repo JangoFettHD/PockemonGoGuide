@@ -28,15 +28,6 @@ public class DetailsActivity extends AppCompatActivity {
         Appodeal.initialize(this, appKey, Appodeal.BANNER);// | Appodeal.NATIVE);
         Appodeal.setBannerViewId(R.id.appodealBannerView_GameProcess);
 
-        Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-            int value = extras.getInt("page");
-            String title = extras.getString("title");
-            webView.loadDataWithBaseURL(null, getPageSourceString(value), "text/html", "ru_RU", null);
-            webView.loadUrl("file:///android_res/raw/"+value);
-
-            getSupportActionBar().setTitle(title);
-        }
     }
 
     @Override
@@ -44,6 +35,14 @@ public class DetailsActivity extends AppCompatActivity {
         super.onResume();
         Appodeal.onResume(this, Appodeal.BANNER);
         Appodeal.show(this, Appodeal.BANNER_BOTTOM);
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            int value = extras.getInt("page");
+            String title = extras.getString("title");
+            webView.loadDataWithBaseURL(null, getPageSourceString(value), "text/html", "ru_RU", null);
+
+            getSupportActionBar().setTitle(title);
+        }
     }
 
     private String getPageSourceString(int resId) {

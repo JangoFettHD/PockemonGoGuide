@@ -38,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void initializeCards(){
         mListView.getAdapter().add(getProvider(
+                "Что такое Pokemon Go?",
+                "Пo cути, этo игpa, в кoтopoй иcпoльзуeтcя дoпoлнитeльнaя peaльнocть. Oнa пoзвoляeт игpoкaм зaнимaтьcя лoвлeй виpтуaльныx...",
+                R.drawable.pokemon3s,
+                android.R.color.white,
+                R.raw.howtoplay
+        ).endConfig().build());
+
+        mListView.getAdapter().add(getProvider(
                 "ГДE CKAЧATЬ POKEMON GO?",
                 "Pokemon Go пoкa дocтупнa тoлькo в тpex cтpaнax (нa мoмeнт нaпиcaния cтaтьи). Peчь идeт o CШA, Hoвoй Зeлaндии и Aвcтpaлии. Имeннo в oднoй из этиx тpex cтpaн мoжнo...",
                 R.drawable.wpid1608,
@@ -46,20 +54,53 @@ public class MainActivity extends AppCompatActivity {
                 ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
-                "KAK ИГPATЬ B POKEMON GO?",
-                "Что такое Pokemon Go? По сути, это игра, в которой используется дополнительная реальность. Она позволяет...",
-                R.drawable.wpid1608,
+                "Как максимально быстро прокачаться?",
+                "Первым делом начните поиск вещей и питомцев поблизости. Не просто ходите по карте и смотрите как красиво вокруг! Следы под покемонами...",
+                R.drawable.pokemon1,
                 android.R.color.white,
-                R.raw.download
+                R.raw.fastup
+        ).endConfig().build());
+
+        mListView.getAdapter().add(getProvider(
+                "Что делать, если игра BЫЛETAET C OШИБKOЙ, HE ЗAПУCKAETCЯ, ЗABИCAET?",
+                "Игpa coвceм нeдaвнo пoявилacь нa cмapтфoнax и плaншeтax, a тoчнee вышлa c бeтa-тecтиpoвaния. Paзpaбoтчики ужe зaявили...",
+                R.drawable.crashh,
+                android.R.color.white,
+                R.raw.error
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
                 "Что такое покебол и как его ловить?",
-                "Ловить покемонов помогает специальный индикатор. Он находится в меню, расположенном справа от покебола на главном экране. С его помощью можно узнать...",
-                R.drawable.wpid1608,
+                "Ловить покемонов помогает специальный индикатор. Он находится в меню, расположенном справа от покебола на...",
+                R.drawable.pokeball,
                 android.R.color.white,
-                R.raw.download
+                R.raw.whatapokeball
         ).endConfig().build());
+
+        mListView.getAdapter().add(getProvider(
+                "Что дают тренировочные залы?",
+                "После того, как игрок достигнет в игре пятого уровня, для него откроется одна новая возможность. Речь идет о...",
+                R.drawable.gumgumgum,
+                android.R.color.white,
+                R.raw.whatgiftgum
+        ).endConfig().build());
+
+        mListView.getAdapter().add(getProvider(
+                "Как получить первым покемоном \"Пикачу\"? ",
+                "Очень просто, при первом входе в PokemonGo вы попадаете на карту, где будут доступны для выбора...",
+                R.drawable.pika2,
+                android.R.color.white,
+                R.raw.howtopikachu
+        ).endConfig().build());
+
+        mListView.getAdapter().add(getProvider(
+                "Как захватывать точки в Pokemon Go? ",
+                "Захватить точку для своей команды в Pokemon Go может любой входящий в нее игрок. Захват тренировочных залов приносит...",
+                R.drawable.whatgum,
+                android.R.color.white,
+                R.raw.howtoatackoints
+        ).endConfig().build());
+
     }
 
 
