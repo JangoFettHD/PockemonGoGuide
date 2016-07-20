@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 "Pokemon Go пoкa дocтупнa тoлькo в тpex cтpaнax (нa мoмeнт нaпиcaния cтaтьи). Peчь идeт o CШA, Hoвoй Зeлaндии и Aвcтpaлии. Имeннo в oднoй из этиx тpex cтpaн мoжнo...",
                 R.drawable.wpid1608,
                 android.R.color.white,
-                "download.html"
+                R.raw.download
                 ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 "Что такое Pokemon Go? По сути, это игра, в которой используется дополнительная реальность. Она позволяет...",
                 R.drawable.wpid1608,
                 android.R.color.white,
-                "download.html"
+                R.raw.download
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
@@ -58,12 +58,12 @@ public class MainActivity extends AppCompatActivity {
                 "Ловить покемонов помогает специальный индикатор. Он находится в меню, расположенном справа от покебола на главном экране. С его помощью можно узнать...",
                 R.drawable.wpid1608,
                 android.R.color.white,
-                "download.html"
+                R.raw.download
         ).endConfig().build());
     }
 
 
-    private CardProvider getProvider(final String title, String shortDescription, int imageResourceId, int titleColorResource, final String pageResource) {
+    private CardProvider getProvider(final String title, String shortDescription, int imageResourceId, int titleColorResource, final int pageResource) {
         return new Card.Builder(this)
                 .setTag("BIG_IMAGE_BUTTONS_CARD")
                 .withProvider(new CardProvider())

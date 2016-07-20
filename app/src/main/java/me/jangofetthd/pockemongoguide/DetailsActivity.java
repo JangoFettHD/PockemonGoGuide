@@ -1,11 +1,14 @@
 package me.jangofetthd.pockemongoguide;
 
+import android.content.res.Resources;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebView;
 
 import com.appodeal.ads.Appodeal;
+
+import java.io.InputStream;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -27,8 +30,9 @@ public class DetailsActivity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            String value = extras.getString("page");
+            int value = extras.getInt("page");
             String title = extras.getString("title");
+            webView.loadDataWithBaseURL(null, getPageSourceString(value), "text/html", "ru_RU", null);
             webView.loadUrl("file:///android_res/raw/"+value);
 
             getSupportActionBar().setTitle(title);
@@ -40,5 +44,18 @@ public class DetailsActivity extends AppCompatActivity {
         super.onResume();
         Appodeal.onResume(this, Appodeal.BANNER);
         Appodeal.show(this, Appodeal.BANNER_BOTTOM);
+    }
+
+    private String getPageSourceString(int resId) {
+        try {
+            Resources res = getResources();
+            InputStream in_s = res.openRawResource(resId);
+
+            byte[] b = new byte[in_s.available()];
+            in_s.read(b);
+            return new String(b);
+        } catch (Exception e) {
+            return "Ошибка при загрузке инструкции";
+        }
     }
 }
