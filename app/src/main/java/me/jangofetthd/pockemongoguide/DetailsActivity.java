@@ -30,6 +30,7 @@ public class DetailsActivity extends AppCompatActivity {
             String value = extras.getString("page");
             String title = extras.getString("title");
             webView.loadUrl("file:///android_res/raw/"+value);
+
             getSupportActionBar().setTitle(title);
         }
     }
