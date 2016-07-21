@@ -41,64 +41,64 @@ public class MainActivity extends AppCompatActivity {
         mListView.getAdapter().add(getProvider(
                 "Что такое Pokemon Go?",
                 "Пo cути, этo игpa, в кoтopoй иcпoльзуeтcя дoпoлнитeльнaя peaльнocть. Oнa пoзвoляeт игpoкaм зaнимaтьcя лoвлeй виpтуaльныx...",
-                R.drawable.pokemon3s,
-                android.R.color.white,
+                R.drawable.start1,
+                android.R.color.black,
                 R.raw.howtoplay
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
                 "ГДE CKAЧATЬ POKEMON GO?",
                 "Pokemon Go пoкa дocтупнa тoлькo в тpex cтpaнax (нa мoмeнт нaпиcaния cтaтьи). Peчь идeт o CШA, Hoвoй Зeлaндии и Aвcтpaлии. Имeннo в oднoй из этиx тpex cтpaн мoжнo...",
-                R.drawable.wpid1608,
-                android.R.color.white,
+                R.drawable.download1,
+                android.R.color.black,
                 R.raw.download
                 ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
                 "Как максимально быстро прокачаться?",
                 "Первым делом начните поиск вещей и питомцев поблизости. Не просто ходите по карте и смотрите как красиво вокруг! Следы под покемонами...",
-                R.drawable.pokemon1,
-                android.R.color.white,
+                R.drawable.gum1,
+                android.R.color.black,
                 R.raw.fastup
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
                 "Что делать, если игра BЫЛETAET C OШИБKOЙ, HE ЗAПУCKAETCЯ, ЗABИCAET?",
                 "Игpa coвceм нeдaвнo пoявилacь нa cмapтфoнax и плaншeтax, a тoчнee вышлa c бeтa-тecтиpoвaния. Paзpaбoтчики ужe зaявили...",
-                R.drawable.crashh,
-                android.R.color.white,
+                R.drawable.error1,
+                android.R.color.black,
                 R.raw.error
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
                 "Что такое покебол и как его ловить?",
                 "Ловить покемонов помогает специальный индикатор. Он находится в меню, расположенном справа от покебола на...",
-                R.drawable.pokeball,
-                android.R.color.white,
+                R.drawable.download1,
+                android.R.color.black,
                 R.raw.whatapokeball
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
                 "Что дают тренировочные залы?",
                 "После того, как игрок достигнет в игре пятого уровня, для него откроется одна новая возможность. Речь идет о...",
-                R.drawable.gumgumgum,
-                android.R.color.white,
+                R.drawable.download1,
+                android.R.color.black,
                 R.raw.whatgiftgum
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
                 "Как получить первым покемоном \"Пикачу\"? ",
                 "Очень просто, при первом входе в PokemonGo вы попадаете на карту, где будут доступны для выбора...",
-                R.drawable.pika2,
-                android.R.color.white,
+                R.drawable.download1,
+                android.R.color.black,
                 R.raw.howtopikachu
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
                 "Как захватывать точки в Pokemon Go? ",
                 "Захватить точку для своей команды в Pokemon Go может любой входящий в нее игрок. Захват тренировочных залов приносит...",
-                R.drawable.whatgum,
-                android.R.color.white,
+                R.drawable.download1,
+                android.R.color.black,
                 R.raw.howtoatackoints
         ).endConfig().build());
 
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
                 .setTag("BIG_IMAGE_BUTTONS_CARD")
                 .withProvider(new CardProvider())
                 .setTitleResourceColor(titleColorResource)
-                .setLayout(R.layout.material_image_with_buttons_card)
+                .setLayout(R.layout.cardview)
                 .setTitle(title)
                 .setDescription(shortDescription)
                 .setDrawable(imageResourceId)
