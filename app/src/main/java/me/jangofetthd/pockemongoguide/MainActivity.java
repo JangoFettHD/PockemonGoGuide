@@ -14,6 +14,7 @@ import com.dexafree.materialList.card.CardProvider;
 import com.dexafree.materialList.card.OnActionClickListener;
 import com.dexafree.materialList.card.action.TextViewAction;
 import com.dexafree.materialList.view.MaterialListView;
+import com.localytics.android.Localytics;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -103,6 +104,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onNewIntent(Intent intent)
+    {
+        super.onNewIntent(intent);
+
+        Localytics.onNewIntent(this, intent);
+    }
 
     private CardProvider getProvider(final String title, String shortDescription, int imageResourceId, int titleColorResource, final int pageResource) {
         return new Card.Builder(this)

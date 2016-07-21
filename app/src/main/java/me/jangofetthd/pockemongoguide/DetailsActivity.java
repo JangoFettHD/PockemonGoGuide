@@ -41,7 +41,7 @@ public class DetailsActivity extends AppCompatActivity {
             String title = extras.getString("title");
             webView.loadDataWithBaseURL(null, getPageSourceString(value), "text/html", "ru_RU", null);
 
-            getSupportActionBar().setTitle(title);
+            //getSupportActionBar().setTitle(title);
         }
     }
 

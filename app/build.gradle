@@ -1,6 +1,15 @@
 apply plugin: 'com.android.application'
 apply plugin: 'android-apt'
 
+repositories
+        {
+            jcenter()
+            maven
+                    {
+                        url 'http://maven.localytics.com/public'
+                    }
+        }
+
 android {
     compileSdkVersion 23
     buildToolsVersion "24.0.0"
@@ -9,8 +18,8 @@ android {
         applicationId "me.jangofetthd.pockemongoguide"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 1
-        versionName "0.39b"
+        versionCode 3
+        versionName "0.41b"
         multiDexEnabled true
     }
     buildTypes {
@@ -32,6 +41,8 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:+'
 
     compile 'com.android.support:multidex:1.0.1'
+
+    compile 'com.localytics.android:library:4.0+'
 
     compile 'com.jakewharton:butterknife:8.2.1'
     apt 'com.jakewharton:butterknife-compiler:8.2.1'
