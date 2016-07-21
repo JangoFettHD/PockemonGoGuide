@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
-                "Как получить первым покемоном \"Пикачу\"? ",
+                "Как получить первым покемоном \"Пикачу\"?",
                 "Очень просто, при первом входе в PokemonGo вы попадаете на карту, где будут доступны для выбора...",
                 R.drawable.pikachu1,
                 android.R.color.black,
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
-                "Как захватывать точки в Pokemon Go? ",
+                "Как захватывать точки в Pokemon Go?",
                 "Захватить точку для своей команды в Pokemon Go может любой входящий в нее игрок. Захват тренировочных залов приносит...",
                 R.drawable.map1,
                 android.R.color.black,
