@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         mListView.getAdapter().add(getProvider(
                 "Что такое покебол и как его ловить?",
                 "Ловить покемонов помогает специальный индикатор. Он находится в меню, расположенном справа от покебола на...",
-                R.drawable.download1,
+                R.drawable.pokeball1,
                 android.R.color.black,
                 R.raw.whatapokeball
         ).endConfig().build());
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         mListView.getAdapter().add(getProvider(
                 "Что дают тренировочные залы?",
                 "После того, как игрок достигнет в игре пятого уровня, для него откроется одна новая возможность. Речь идет о...",
-                R.drawable.download1,
+                R.drawable.gumgift1,
                 android.R.color.black,
                 R.raw.whatgiftgum
         ).endConfig().build());
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         mListView.getAdapter().add(getProvider(
                 "Как получить первым покемоном \"Пикачу\"? ",
                 "Очень просто, при первом входе в PokemonGo вы попадаете на карту, где будут доступны для выбора...",
-                R.drawable.download1,
+                R.drawable.pikachu1,
                 android.R.color.black,
                 R.raw.howtopikachu
         ).endConfig().build());
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         mListView.getAdapter().add(getProvider(
                 "Как захватывать точки в Pokemon Go? ",
                 "Захватить точку для своей команды в Pokemon Go может любой входящий в нее игрок. Захват тренировочных залов приносит...",
-                R.drawable.download1,
+                R.drawable.map1,
                 android.R.color.black,
                 R.raw.howtoatackoints
         ).endConfig().build());
