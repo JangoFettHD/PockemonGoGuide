@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         //mListView = (MaterialListView)findViewById(R.id.material_listview1);
         initializeCards();
-
+        mListView.smoothScrollToPosition(0);
 
     }
 
