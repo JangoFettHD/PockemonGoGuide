@@ -102,6 +102,53 @@ public class MainActivity extends AppCompatActivity {
                 R.raw.howtoatackoints
         ).endConfig().build());
 
+        mListView.getAdapter().add(getProvider(
+                "Pokemon Go сильно разряжает батарею?",
+                "Cтoит учecть, чтo игpa дoвoльнo пpoжopливa в плaнe пoглoщeния зapядa бaтapeи. Пoэтoму Pokemon Go быcтpo paзpяжaeт дaжe oчeнь eмкиe aккумулятopы. Пpичин тoму нecкoлькo...",
+                R.drawable.lowbattery1,
+                android.R.color.black,
+                R.raw.fastlowbattery
+        ).endConfig().build());
+
+        mListView.getAdapter().add(getProvider(
+                "Какие бы советы я хотел услышать 22 уровня назад?",
+                "В начале пыли много, а усиление (Power-up) дешёвое. Не поддавайтесь на искушение! Вы быстро прокачаетесь и поймаете покемонов с...",
+                R.drawable.lvl22,
+                android.R.color.black,
+                R.raw.whatshouldiknow22levelsago
+        ).endConfig().build());
+
+        mListView.getAdapter().add(getProvider(
+                "Какие получить нужную эволюцию иви?",
+                "Способ получить нужную эволюцию Иви достаточно простой...",
+                R.drawable.eevee1,
+                android.R.color.black,
+                R.raw.eeveeevolutions
+        ).endConfig().build());
+
+        mListView.getAdapter().add(getProvider(
+                "Как справиться с врагом любого уровня?",
+                "Простой метод уклонения и нападения поможет вам справиться с врагом практически любого уровня. Достаточно...",
+                R.drawable.enemy1,
+                android.R.color.black,
+                R.raw.battlewithany
+        ).endConfig().build());
+
+        mListView.getAdapter().add(getProvider(
+                "Как быстро найти покемона поблизости?",
+                "Вы можете увидеть близлежащего покемона, нажав на белую прямоугольную полоску в правом нижнем углу экрана. Затем появится...",
+                R.drawable.pokemonnear1,
+                android.R.color.black,
+                R.raw.howtofind
+        ).endConfig().build());
+
+        mListView.getAdapter().add(getProvider(
+                "Как заработать дополнительный XP при поимке покемона?",
+                "Это ещё одна уловка, о которой мы не знали при прохождении наших первых уровней. Если вы нажмёте и будете удерживать...",
+                R.drawable.morexp1,
+                android.R.color.black,
+                R.raw.earnextraxp
+        ).endConfig().build());
     }
 
     @Override
