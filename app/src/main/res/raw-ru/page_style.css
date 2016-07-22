@@ -1,0 +1,9 @@
+p, li{
+    color: #404040 !important;
+}
+body{
+    font-size:18px;
+}
+.btn-mat{
+    background-color: #283593;
+}

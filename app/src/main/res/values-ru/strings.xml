@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Guides and tips for Pokemon Go</string>
+    <string name="app_name">Секреты и гайды для Pokemon Go</string>
     <string name="s1_title">Что такое Pokemon Go?</string>
     <string name="s1_subtitle">Пo cути, этo игpa, в кoтopoй иcпoльзуeтcя дoпoлнитeльнaя peaльнocть. Oнa пoзвoляeт игpoкaм зaнимaтьcя лoвлeй виpтуaльныx...</string>
     <string name="s2_title">ГДE CKAЧATЬ POKEMON GO?</string>
@@ -28,8 +29,8 @@
     <string name="s13_subtitle">Вы можете увидеть близлежащего покемона, нажав на белую прямоугольную полоску в правом нижнем углу экрана. Затем появится...</string>
     <string name="s14_title">Как заработать дополнительный XP при поимке покемона?</string>
     <string name="s14_subtitle">Это ещё одна уловка, о которой мы не знали при прохождении наших первых уровней. Если вы нажмёте и будете удерживать...</string>
-    <string name="share_title">Guides and tips for Pokemon Go - the best guides and tips for this game!</string>
-    <string name="share_body"> You can find answer for this question there:</string>
-    <string name="button_more">More</string>
-    <string name="button_share">Share</string>
+    <string name="share_title">Секреты и гайды для Pokemon Go - лучшие советы по прохождению игры!</string>
+    <string name="share_body"> Ответ на этот вопрос здесь:</string>
+    <string name="button_more">Подробнее</string>
+    <string name="button_share">Поделиться</string>
 </resources>

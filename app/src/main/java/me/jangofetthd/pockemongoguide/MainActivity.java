@@ -39,112 +39,112 @@ public class MainActivity extends AppCompatActivity {
 
     private void initializeCards(){
         mListView.getAdapter().add(getProvider(
-                "Что такое Pokemon Go?",
-                "Пo cути, этo игpa, в кoтopoй иcпoльзуeтcя дoпoлнитeльнaя peaльнocть. Oнa пoзвoляeт игpoкaм зaнимaтьcя лoвлeй виpтуaльныx...",
+                getString(R.string.s1_title),
+                getString(R.string.s1_subtitle),
                 R.drawable.start1,
                 android.R.color.black,
                 R.raw.howtoplay
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
-                "ГДE CKAЧATЬ POKEMON GO?",
-                "Pokemon Go пoкa дocтупнa тoлькo в тpex cтpaнax (нa мoмeнт нaпиcaния cтaтьи). Peчь идeт o CШA, Hoвoй Зeлaндии и Aвcтpaлии. Имeннo в oднoй из этиx тpex cтpaн мoжнo...",
+                getString(R.string.s2_title),
+                getString(R.string.s2_subtitle),
                 R.drawable.download1,
                 android.R.color.black,
                 R.raw.download
                 ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
-                "Как максимально быстро прокачаться?",
-                "Первым делом начните поиск вещей и питомцев поблизости. Не просто ходите по карте и смотрите как красиво вокруг! Следы под покемонами...",
+                getString(R.string.s3_title),
+                getString(R.string.s3_subtitle),
                 R.drawable.gum1,
                 android.R.color.black,
                 R.raw.fastup
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
-                "Что делать, если игра BЫЛETAET C OШИБKOЙ, HE ЗAПУCKAETCЯ, ЗABИCAET?",
-                "Игpa coвceм нeдaвнo пoявилacь нa cмapтфoнax и плaншeтax, a тoчнee вышлa c бeтa-тecтиpoвaния. Paзpaбoтчики ужe зaявили...",
+                getString(R.string.s4_title),
+                getString(R.string.s4_subtitle),
                 R.drawable.error1,
                 android.R.color.black,
                 R.raw.error
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
-                "Что такое покебол и как его ловить?",
-                "Ловить покемонов помогает специальный индикатор. Он находится в меню, расположенном справа от покебола на...",
+                getString(R.string.s5_title),
+                getString(R.string.s5_subtitle),
                 R.drawable.pokeball1,
                 android.R.color.black,
                 R.raw.whatapokeball
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
-                "Что дают тренировочные залы?",
-                "После того, как игрок достигнет в игре пятого уровня, для него откроется одна новая возможность. Речь идет о...",
+                getString(R.string.s6_title),
+                getString(R.string.s6_subtitle),
                 R.drawable.gumgift1,
                 android.R.color.black,
                 R.raw.whatgiftgum
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
-                "Как получить первым покемоном \"Пикачу\"?",
-                "Очень просто, при первом входе в PokemonGo вы попадаете на карту, где будут доступны для выбора...",
+                getString(R.string.s7_title),
+                getString(R.string.s7_subtitle),
                 R.drawable.pikachu1,
                 android.R.color.black,
                 R.raw.howtopikachu
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
-                "Как захватывать точки в Pokemon Go?",
-                "Захватить точку для своей команды в Pokemon Go может любой входящий в нее игрок. Захват тренировочных залов приносит...",
+                getString(R.string.s8_title),
+                getString(R.string.s8_subtitle),
                 R.drawable.map1,
                 android.R.color.black,
                 R.raw.howtoatackoints
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
-                "Pokemon Go сильно разряжает батарею?",
-                "Cтoит учecть, чтo игpa дoвoльнo пpoжopливa в плaнe пoглoщeния зapядa бaтapeи. Пoэтoму Pokemon Go быcтpo paзpяжaeт дaжe oчeнь eмкиe aккумулятopы. Пpичин тoму нecкoлькo...",
+                getString(R.string.s9_title),
+                getString(R.string.s9_subtitle),
                 R.drawable.lowbattery1,
                 android.R.color.black,
                 R.raw.fastlowbattery
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
-                "Какие бы советы я хотел услышать 22 уровня назад?",
-                "В начале пыли много, а усиление (Power-up) дешёвое. Не поддавайтесь на искушение! Вы быстро прокачаетесь и поймаете покемонов с...",
+                getString(R.string.s10_title),
+                getString(R.string.s10_subtitle),
                 R.drawable.lvl22,
                 android.R.color.black,
                 R.raw.whatshouldiknow22levelsago
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
-                "Какие получить нужную эволюцию иви?",
-                "Способ получить нужную эволюцию Иви достаточно простой...",
+                getString(R.string.s11_title),
+                getString(R.string.s11_subtitle),
                 R.drawable.eevee1,
                 android.R.color.black,
                 R.raw.eeveeevolutions
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
-                "Как справиться с врагом любого уровня?",
-                "Простой метод уклонения и нападения поможет вам справиться с врагом практически любого уровня. Достаточно...",
+                getString(R.string.s12_title),
+                getString(R.string.s12_subtitle),
                 R.drawable.enemy1,
                 android.R.color.black,
                 R.raw.battlewithany
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
-                "Как быстро найти покемона поблизости?",
-                "Вы можете увидеть близлежащего покемона, нажав на белую прямоугольную полоску в правом нижнем углу экрана. Затем появится...",
+                getString(R.string.s13_title),
+                getString(R.string.s13_subtitle),
                 R.drawable.pokemonnear1,
                 android.R.color.black,
                 R.raw.howtofind
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
-                "Как заработать дополнительный XP при поимке покемона?",
-                "Это ещё одна уловка, о которой мы не знали при прохождении наших первых уровней. Если вы нажмёте и будете удерживать...",
+                getString(R.string.s14_title),
+                getString(R.string.s14_subtitle),
                 R.drawable.morexp1,
                 android.R.color.black,
                 R.raw.earnextraxp
@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
                 .setDescription(shortDescription)
                 .setDrawable(imageResourceId)
                 .addAction(R.id.left_text_button, new TextViewAction(this)
-                        .setText("Подробнее")
+                        .setText(R.string.button_more)
                         .setTextResourceColor(R.color.black_button)
                         .setListener(new OnActionClickListener() {
                             @Override
@@ -186,15 +186,15 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }))
                 .addAction(R.id.right_text_button, new TextViewAction(this)
-                        .setText("Поделиться")
+                        .setText(R.string.button_share)
                         .setTextResourceColor(R.color.accent_material_dark)
                         .setListener(new OnActionClickListener() {
                             @Override
                             public void onActionClicked(View view, Card card) {
                                 Intent intent = new Intent(android.content.Intent.ACTION_SEND);
                                 intent.setType("text/plain");
-                                intent.putExtra(Intent.EXTRA_SUBJECT, "Покемон Го Гайд - лучшие советы по прохождению игры!");
-                                intent.putExtra(Intent.EXTRA_TEXT, title+" Ответ на этот вопрос здесь:" + " https://play.google.com/store/apps/details?id=me.jangofetthd.pockemongoguide");
+                                intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.share_title));
+                                intent.putExtra(Intent.EXTRA_TEXT, title+getString(R.string.share_body) + " https://play.google.com/store/apps/details?id=me.jangofetthd.pockemongoguide");
                                 startActivity(intent);
                             }
                         }));
