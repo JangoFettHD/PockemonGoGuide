@@ -33,4 +33,6 @@
     <string name="share_body"> Ответ на этот вопрос здесь:</string>
     <string name="button_more">Подробнее</string>
     <string name="button_share">Поделиться</string>
+    <string name="s15_title">Большой мануал по Pokemon Go</string>
+    <string name="s15_desciption">Прочитав этот мануал вы не только узнаете все аспекты игры, но и...</string>
 </resources>

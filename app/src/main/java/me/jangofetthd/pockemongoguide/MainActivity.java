@@ -19,6 +19,8 @@ import com.localytics.android.Localytics;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.material_listview1) MaterialListView mListView;
@@ -44,6 +46,15 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.start1,
                 android.R.color.black,
                 R.raw.howtoplay
+        ).endConfig().build());
+
+        if (Locale.getDefault().getLanguage().equals("ru")) //доступно только для русских пользователей
+        mListView.getAdapter().add(getProvider(
+                getString(R.string.s15_title),
+                getString(R.string.s15_desciption),
+                R.drawable.basic_banner,
+                android.R.color.black,
+                R.raw.basic
         ).endConfig().build());
 
         mListView.getAdapter().add(getProvider(
