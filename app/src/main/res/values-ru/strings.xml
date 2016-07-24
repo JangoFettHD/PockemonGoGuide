@@ -34,5 +34,12 @@
     <string name="button_more">Подробнее</string>
     <string name="button_share">Поделиться</string>
     <string name="s15_title">Большой мануал по Pokemon Go</string>
-    <string name="s15_desciption">Прочитав этот мануал вы не только узнаете все аспекты игры, но и...</string>
+    <string name="s15_subtitle">Прочитав этот мануал вы не только узнаете все аспекты игры, но и...</string>
+    <string name="AR_PlayStoreNotInstalled">Play Store не установлен</string>
+    <string name="AR_title">Оцените приложение</string>
+    <string name="AR_message">Если Вам нравится приложение \"</string>
+    <string name="AR_message1">\", пожалуйста, уделите минутку и оцените его на 5 звезд. Спасибо!</string>
+    <string name="AR_rate">Оценить!</string>
+    <string name="AR_later">Позже</string>
+    <string name="AR_dismiss">Нет, спасибо</string>
 </resources>

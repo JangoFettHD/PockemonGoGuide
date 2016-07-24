@@ -1,10 +1,14 @@
 package me.jangofetthd.pockemongoguide;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.net.Uri;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Toast;
 
@@ -13,18 +17,22 @@ import com.dexafree.materialList.card.Card;
 import com.dexafree.materialList.card.CardProvider;
 import com.dexafree.materialList.card.OnActionClickListener;
 import com.dexafree.materialList.card.action.TextViewAction;
+import com.dexafree.materialList.card.action.WelcomeButtonAction;
+import com.dexafree.materialList.listeners.OnDismissCallback;
 import com.dexafree.materialList.view.MaterialListView;
 import com.localytics.android.Localytics;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import com.squareup.picasso.RequestCreator;
 
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.material_listview1) MaterialListView mListView;
-    //MaterialListView mListView;
+    boolean aboutCardDismiss=false;
+    SharedPreferences shared;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,14 +40,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ButterKnife.bind(this);
-        //mListView = (MaterialListView)findViewById(R.id.material_listview1);
+
+        shared = getSharedPreferences("PokemonGoGuides", 0);
+        aboutCardDismiss = shared.getBoolean("isAboutCardDismissed", false);
+
         initializeCards();
         mListView.smoothScrollToPosition(0);
-
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        new AppRate(this)
+                .setMinLaunchesUntilPrompt(10)
+                .init();
+    }
 
     private void initializeCards(){
+
         mListView.getAdapter().add(getProvider(
                 getString(R.string.s1_title),
                 getString(R.string.s1_subtitle),
@@ -48,10 +66,10 @@ public class MainActivity extends AppCompatActivity {
                 R.raw.howtoplay
         ).endConfig().build());
 
-        if (Locale.getDefault().getLanguage().equals("ru")) //доступно только для русских пользователей
+        //if (Locale.getDefault().getLanguage().equals("ru")) //доступно только для русских пользователей
         mListView.getAdapter().add(getProvider(
                 getString(R.string.s15_title),
-                getString(R.string.s15_desciption),
+                getString(R.string.s15_subtitle),
                 R.drawable.basic_banner,
                 android.R.color.black,
                 R.raw.basic
@@ -160,6 +178,59 @@ public class MainActivity extends AppCompatActivity {
                 android.R.color.black,
                 R.raw.earnextraxp
         ).endConfig().build());
+
+
+        if (Locale.getDefault().getLanguage().equals("ru")&&!aboutCardDismiss)
+        mListView.getAdapter().add(new Card.Builder(this)
+                .setDismissible()
+                .setTag("about")
+                .withProvider(new CardProvider())
+                .setLayout(R.layout.cardabout)
+                .setTitle("JangoFettHD")
+                .setTitleGravity(Gravity.CENTER_HORIZONTAL)
+                .setDescription("Компания, которая выделяется своим качеством в создании сочных мобильных приложений")
+                .setDescriptionGravity(Gravity.CENTER_HORIZONTAL)
+                .setDrawable(R.drawable.jf)
+                /*.setDrawableConfiguration(new CardProvider.OnImageConfigListener() {
+                    @Override
+                    public void onImageConfigure(@NonNull RequestCreator requestCreator) {
+                        requestCreator.fit();
+                    }
+                })*/
+                .addAction(R.id.left_text_button, new TextViewAction(this)
+                        .setText("О нас")
+                        .setTextResourceColor(R.color.black_button)
+                        .setListener(new OnActionClickListener() {
+                            @Override
+                            public void onActionClicked(View view, Card card) {
+                                Intent i = new Intent(Intent.ACTION_VIEW,
+                                        Uri.parse("http://jangofetthd.me/"));
+                                startActivity(i);
+                            }
+                        }))
+                /*.addAction(R.id.right_text_button, new TextViewAction(this)
+                        .setText("Derecha")
+                        .setTextResourceColor(R.color.orange_button)
+                        .setListener(new OnActionClickListener() {
+                            @Override
+                            public void onActionClicked(View view, Card card) {
+                                Toast.makeText(MainActivity.this, "You have pressed the right button on card " + card.getProvider().getTitle(), Toast.LENGTH_SHORT).show();
+                                card.dismiss();
+                            }
+                        }))*/
+                .endConfig()
+                .build());
+        mListView.setOnDismissCallback(new OnDismissCallback() {
+            @Override
+            public void onDismiss(@NonNull Card card, int position) {
+                if (card.getTag().equals("about")){
+                    aboutCardDismiss = true;
+                    SharedPreferences.Editor editor = shared.edit();
+                    editor.putBoolean("isAboutCardDismissed", aboutCardDismiss);
+                    editor.apply();
+                }
+            }
+        });
     }
 
     @Override

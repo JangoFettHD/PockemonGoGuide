@@ -32,6 +32,13 @@
     <string name="share_body"> You can find answer for this question there:</string>
     <string name="button_more">More</string>
     <string name="button_share">Share</string>
-    <string name="s15_title">Большой мануал по Pokemon Go</string>
-    <string name="s15_desciption">Прочитав этот мануал вы станете не только узнаете все аспекты игры, но и...</string>
+    <string name="s15_title">A Pokémon Go Tutorial</string>
+    <string name="s15_subtitle">The game is about collecting Pokemon. In later stages of the game you...</string>
+    <string name="AR_PlayStoreNotInstalled">No Play Store installed on device</string>
+    <string name="AR_title">Rate </string>
+    <string name="AR_message">If you enjoy using \"</string>
+    <string name="AR_message1">\", please take a moment to rate it. Thanks for your support!</string>
+    <string name="AR_rate">Rate it!</string>
+    <string name="AR_later">Remind me later</string>
+    <string name="AR_dismiss">No thanks</string>
 </resources>
